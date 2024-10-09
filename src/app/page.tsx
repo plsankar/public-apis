@@ -2,6 +2,11 @@ import { Button } from "@/components/ui/button";
 import CategoryTags from "@/components/category-tags";
 import Link from "next/link";
 import apis from "@/data";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Public APIs - A collective list of Public APIs",
+};
 
 export default async function Home() {
     return (

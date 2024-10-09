@@ -20,6 +20,25 @@ import Link from "next/link";
 import apis from "@/data";
 import { generateCategorySlug } from "@/lib/category";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+    params,
+}: {
+    params: { slug: string };
+}): Promise<Metadata> {
+    const category = apis.find(
+        (category) => generateCategorySlug(category.title) === params.slug
+    );
+
+    if (!category) {
+        notFound();
+    }
+
+    return {
+        title: category.title,
+    };
+}
 
 export async function generateStaticParams() {
     return apis.map((category) => ({

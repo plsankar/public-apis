@@ -4,6 +4,11 @@ import { generateCategorySlug, getIcon } from "@/lib/category";
 import Link from "next/link";
 import React from "react";
 import apis from "@/data";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "All Categories | Public APIs - A collective list of Public APIs",
+};
 
 const Categories = () => {
     return (
