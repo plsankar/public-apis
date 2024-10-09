@@ -7,7 +7,7 @@ import apis from "@/data";
 
 const Categories = () => {
     return (
-        <div className="container mx-auto mb-20">
+        <div className="container mx-auto mb-20 pt-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
                 {apis.map((category, index) => {
                     const Icon = getIcon(category.title);
