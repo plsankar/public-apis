@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 const Navbar = () => {
     return (
-        <nav className="bg-white border-gray-200 dark:bg-gray-900 border-b">
+        <nav className="bg-white border-gray-200 border-b">
             <div className="container flex flex-wrap items-center justify-between mx-auto py-4">
                 <Link
                     href="/"
